@@ -97,3 +97,28 @@ def get_logging_config() -> LoggingConfig:
             for handler in logging.getLogger().handlers
         ),
     )
+
+def setup_logger(name: str):
+    """
+    Initialize and configure a logger for a specific module or component.
+
+    Args:
+        name (str): Name of the logger (usually __name__).
+
+    Returns:
+        logging.Logger: Configured logger instance.
+
+    Example:
+        >>> logger = setup_logger(__name__)
+        >>> logger.info("Logger initialized successfully.")
+    """
+    logger = logging.getLogger(name)
+    # Avoid duplicate handlers if setup_logger is called multiple times
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s")
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+    return logger
+
