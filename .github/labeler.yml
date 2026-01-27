@@ -60,3 +60,15 @@ config:
       - '**/*.toml'
       - '**/*.ini'
       - '**/*.conf'
+
+# Good first issues (low-risk changes)
+good first issue:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'docs/**/*'
+      - '*.md'
+      - '*.mdx'
+      - 'tests/**/*'
+      - '**/test_*.py'
+      - '**/*_test.py'
+      - '.github/*.yml'
