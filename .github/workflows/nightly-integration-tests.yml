@@ -4,8 +4,6 @@ env:
   OM1_API_KEY: ${{ secrets.OM1_API_KEY }}
 
 on:
-  schedule:
-    - cron: '0 * * * *'
   workflow_dispatch:
   push:
     branches:
