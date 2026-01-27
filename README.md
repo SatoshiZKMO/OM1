@@ -1,5 +1,7 @@
 ![OM_Banner_X2 (1)](https://github.com/user-attachments/assets/853153b7-351a-433d-9e1a-d257b781f93c)
 
+[![Nightly Integration Tests](https://github.com/OpenMind/OM1/actions/workflows/nightly-integration-tests.yml/badge.svg)](https://github.com/OpenMind/OM1/actions/workflows/nightly-integration-tests.yml)
+
 <p align="center">
 <a href="https://arxiv.org/abs/2412.18588">Technical Paper</a> |
 <a href="https://docs.openmind.org/">Documentation</a> |
