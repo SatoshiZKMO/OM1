@@ -1,10 +1,11 @@
 import json
 import logging
 from pathlib import Path
+from functools import lru_cache
 
 from jsonschema import ValidationError, validate
 
-
+@lru_cache(maxsize=4)
 def _load_schema(schema_file: str) -> dict:
     """
     Load and cache schema files.
