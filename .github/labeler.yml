@@ -27,8 +27,8 @@ infrastructure:
 ci-cd:
   - changed-files:
     - any-glob-to-any-file:
-      - '.github/**/*'
-      - '**/.github/**/*'
+      - '.github/workflows/**/*'
+      
 
 # Dependencies
 dependencies:
