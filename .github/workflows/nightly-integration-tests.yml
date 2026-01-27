@@ -3,6 +3,14 @@ name: Run Nightly Integration Tests
 env:
   OM1_API_KEY: ${{ secrets.OM1_API_KEY }}
 
+  permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   schedule:
     - cron: '0 * * * *'
